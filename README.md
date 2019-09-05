@@ -18,6 +18,7 @@ Info(about)<br>
 
 ## REDUX STATE:
 Items<br>
+ACtive Card<br>
 
 ## REDUX ACTIONS:
 ADD_ITEM<br>
