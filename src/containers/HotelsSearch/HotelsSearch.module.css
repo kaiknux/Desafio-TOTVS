@@ -1,0 +1,19 @@
+.upperArea {
+    font-style: inherit;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;   
+    height: 70px;
+}
+
+
+.inputArea {
+    color: white;
+    background-color: #2b58dd;
+}
+
+@media (max-width: 530px) {}
+@media (min-width: 530px) {}
