@@ -1,29 +1,32 @@
 # Desafio-TOTVS
  
-Criado com Create React App!
+Criado com Create React App!<br>
 Início do projeto: 2019-09-05 às 14 horas
 
-Estrutura do layout: 
-Header
-Search
-Results List (cards)
+## Estrutura do layout: 
 
-Router prpoposto:
-Results List (cards)
-Add item to database
-Manage items
-Info(about)
+Header<br>
+Search<br>
+Results List (cards)<br>
 
-REDUX STATE
-Items
+## Router prpoposto:
 
-REDUX ACTIONS:
-ADD_ITEM
-REMOVE_ITEM
-REFRESH_ITEMS
+Results List (cards)<br>
+Add item to database<br>
+Manage items<br>
+Info(about)<br>
 
-Banco de dados:
-Google Firebase
+## REDUX STATE:
+Items<br>
+ACtive Card<br>
 
-REST:
-Async Await / Axios
+## REDUX ACTIONS:
+ADD_ITEM<br>
+REMOVE_ITEM<br>
+REFRESH_ITEMS<br>
+
+## Banco de dados:
+Google Firebase<br>
+
+## REST:
+Async Await / Axios<br>
