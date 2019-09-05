@@ -4,7 +4,7 @@ Criado com Create React App!
 Início do projeto: 2019-09-05 às 14 horas
 
 Estrutura do layout: 
-Header
+ Header
 Search
 Results List (cards)
 
