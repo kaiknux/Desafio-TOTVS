@@ -31,6 +31,6 @@ Google Firebase<br>
 ## REST:
 Async Await / Axios<br>
 
-## Não usar:
+## Não usei:
 Prop-types pra validar forms na feature de envio de 'novos hotéis'<br>
 React Boostrap(3)
