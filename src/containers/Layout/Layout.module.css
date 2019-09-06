@@ -2,4 +2,8 @@
     font-family: 'Roboto';
     font-weight: 600;
     background-color: #fafafa;
+
+}
+.footerPusher {
+    min-height: 100%;
 }

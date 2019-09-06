@@ -12,8 +12,10 @@ class Layout extends Component {
     render() {
         return (
             <div className={classes.layContainer}>
+                <div className={classes.footerPusher}>
                 <Toolbar />
                 <HotelsSearch />
+                </div>
                 <Footer />
             </div>
         )

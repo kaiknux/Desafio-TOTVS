@@ -4,7 +4,7 @@ import Rococo from '../../components/UI/RococoDeFundo/RococoDeFundo';
 
 import magGlass from '../../assets/images/magGlass.png';
 import Input from '../../components/Input/Input';
-import CityCard from '../../components/CityCard/CityCard';
+import SearchResults from '../../components/SearchResults/SearchResults';
 
 const hotelsSearch = (props) => (
     <div className={classes.hsContainer}>
@@ -20,8 +20,7 @@ const hotelsSearch = (props) => (
         </div>
         <Rococo />
         <div className={classes.searchArea}>
-            Resultado da busca
-            <CityCard />
+            <SearchResults />
         </div>
     </div>
 )
