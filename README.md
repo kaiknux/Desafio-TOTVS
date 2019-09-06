@@ -32,5 +32,5 @@ Google Firebase<br>
 Async Await / Axios<br>
 
 ## Não usar:
-Prop-types pra validar forms na feature de envio de 'novos hotéis'
+Prop-types pra validar forms na feature de envio de 'novos hotéis'<br>
 React Boostrap(3)
