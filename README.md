@@ -8,12 +8,13 @@ Início do projeto: 2019-09-05 às 14 horas
 Header<br>
 Search<br>
 Results List (cards)<br>
+Layout em coluna única, portanto opto pelo flexbox e não usar o css grid.<br>
 
 ## Router prpoposto:
 
-Results List (cards)<br>
-Add item to database<br>
-Manage items<br>
+Search (cards)<br>
+Add item to database (criar hotel)<br>
+Manage items (listar e deletar)<br>
 Info(about)<br>
 
 ## REDUX STATE:
