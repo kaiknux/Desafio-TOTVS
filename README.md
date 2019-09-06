@@ -33,4 +33,6 @@ Async Await / Axios<br>
 
 ## Não usei:
 Prop-types pra validar forms na feature de envio de 'novos hotéis'<br>
-React Boostrap(3)
+React Boostrap(3)<br>
+SASS ou LESS<br>
+Embelezadores de código tipo ESLint e prettier
