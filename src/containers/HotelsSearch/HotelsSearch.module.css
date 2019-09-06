@@ -1,19 +1,84 @@
+.hsContainer {
+    width: 100%;
+}
+
 .upperArea {
     font-style: inherit;
     color: white;
     width: 100%;
-    display: inline-block;
-    padding-bottom: 100%;
-    vertical-align: middle;
-    overflow: hidden;   
-    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b58dd;
+    
 }
 
 
 .inputArea {
     color: white;
     background-color: #2b58dd;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    
 }
+
+.inputItself {
+    
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    max-width: 450px;
+    min-width: 359px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.formBtn1 {
+    height: 47px;
+    width: 90px;
+    box-sizing: border-box;
+    border: 1px hidden white;
+    border-radius: 0px 3px 3px 0px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    /*Safari*/transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #fed468;
+    color: white;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    -moz-border-radius: 0px 3px 3px 0px;
+    -ms-border-radius: 0px 3px 3px 0px;
+    -o-border-radius: 0px 3px 3px 0px;
+}
+
+.formBtn1:hover {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #fed468;
+}
+
+.formMagGlass {
+    height: 18px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.searchArea {
+    margin: 100px auto 100% auto;
+    max-width: 650px;
+}
+
+
 
 @media (max-width: 530px) {}
 @media (min-width: 530px) {}

@@ -2,12 +2,21 @@
     font-style: inherit;
     background-color:#2b58dd;
     color: white;
-    position: sticky;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 62px;
-}
+    height: 120px;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 250;
+
+}
+.tbContent {
+    margin: 40px auto 40px auto;
+
+}
 @media (max-width: 530px) {}
 @media (min-width: 530px) {}
