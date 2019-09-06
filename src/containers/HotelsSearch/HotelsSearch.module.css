@@ -1,0 +1,83 @@
+.hsContainer {
+    width: 100%;
+}
+
+.upperArea {
+    font-style: inherit;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b58dd;
+}
+
+
+.inputArea {
+    color: white;
+    background-color: #2b58dd;
+    margin-top: 140px;
+    width: 100%;
+    height: 80px;
+}
+
+.inputItself {
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    max-width: 550px;
+    min-width: 330px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.formBtn1 {
+    height: 47px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px hidden white;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    /*Safari*/transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #fed468;
+    color: white;
+    border-radius: 0px 2px 2px 0px;
+    -webkit-border-radius: 0px 2px 2px 0px;
+    -moz-border-radius: 0px 2px 2px 0px;
+    -ms-border-radius: 0px 2px 2px 0px;
+    -o-border-radius: 0px 2px 2px 0px;
+}
+
+.formBtn1:hover {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #fed468;
+}
+
+.formMagGlass {
+    height: 18px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.searchArea {
+    margin: 20px auto 0px auto;
+    max-width: 650px;
+    background-color: #fbfbfb;
+    min-height: 400px;
+}
+
+
+
+@media (max-width: 530px) {}
+@media (min-width: 530px) {}

@@ -1,0 +1,53 @@
+.tbContainer {
+    font-style: inherit;
+    background: rgb(240,249,255); /* Old browsers */
+    background: rgb(240,249,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 0%, rgba(203,235,255,1) 0%, rgba(43,88,221,1) 76%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 0%,rgba(203,235,255,1) 0%,rgba(43,88,221,1) 76%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 0%,rgba(203,235,255,1) 0%,rgba(43,88,221,1) 76%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#2b58dd',GradientType=0 ); /* IE6-9 */    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+}
+
+.tbContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 250;
+}
+
+.tbNav {
+    max-width: 600px;
+    min-width: 359px;
+    margin: 20px auto 0px auto;
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divLogo {
+    border-top: 1px solid grey;
+    padding-top: 17.5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 40px auto;
+}
+
+@media (max-width: 500px) {
+    .tbNav {
+        display: none;
+    }
+}
+@media (min-width: 500px) {
+    .tbNav {
+        display: flex;
+    }
+}
+

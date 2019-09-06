@@ -1,0 +1,13 @@
+.ftContainer {
+    font-style: 'Roboto';
+    background-color:#2b58dd;
+    color: white;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+}
+
+@media (max-width: 530px) {}
+@media (min-width: 530px) {}
