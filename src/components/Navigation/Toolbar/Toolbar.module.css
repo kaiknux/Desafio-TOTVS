@@ -26,12 +26,9 @@
     min-width: 359px;
     margin: 20px auto 0px auto;
     text-align: center;
-    display: flex;
+
     flex-direction: column;
     justify-content: center;
-
-
-
 }
 
 .divLogo {
@@ -43,5 +40,14 @@
     margin: 20px auto 40px auto;
 }
 
-@media (max-width: 530px) {}
-@media (min-width: 530px) {}
+@media (max-width: 500px) {
+    .tbNav {
+        display: none;
+    }
+}
+@media (min-width: 500px) {
+    .tbNav {
+        display: flex;
+    }
+}
+

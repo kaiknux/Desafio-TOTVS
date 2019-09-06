@@ -26,9 +26,10 @@ class Layout extends Component {
                 <div className={classes.footerPusher}>
                     <Toolbar />
 
-                    <button onClick={() => this.setState({showSideDrawer: true})}>Mostrar Sidebar</button>
                 </div>
                 {this.props.children}
+                <button onClick={() => this.setState({showSideDrawer: true})}>Mostrar Sidebar</button>
+
                 <Footer />
                 <SideDrawer open={this.state.showSideDrawer}
                     closed={this.sideDrawerClosedHandler} />

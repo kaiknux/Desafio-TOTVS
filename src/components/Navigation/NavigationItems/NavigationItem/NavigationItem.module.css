@@ -20,7 +20,7 @@
 .NavigationItem a:hover,
 .NavigationItem a:active,
 .NavigationItem a.active {
-    color: #4ec2dd;
+    color: #dda711;
     text-transform: uppercase;
     font-weight: 700;
 
