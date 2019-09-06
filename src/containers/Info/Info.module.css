@@ -1,0 +1,9 @@
+.infoContainer {
+    margin: 20px auto 0px auto;
+    max-width: 650px;
+    background-color: #fbfbfb;
+    min-height: 700px;
+    margin-top: 120px;
+    display: flex;
+
+}
