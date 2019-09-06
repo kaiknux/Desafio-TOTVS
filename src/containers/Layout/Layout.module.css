@@ -3,7 +3,11 @@
     font-weight: 600;
     background-color: #fafafa;
 
+
 }
 .footerPusher {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
     min-height: 100%;
 }

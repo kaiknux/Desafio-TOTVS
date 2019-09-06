@@ -5,10 +5,16 @@ body {
     sans-serif, 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 352px;
+  min-width: 330px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media (max-width: 390px) {
+  body {
+    margin: 1px;
+  }
 }
