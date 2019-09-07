@@ -7,6 +7,7 @@
     -o-border-radius: 2px;
     font-style: 'Roboto';
     background-color: white;
+    margin-bottom: 7.5px;
 }
 
 .ccHeader {
@@ -23,10 +24,14 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 14px;
     font-stretch: ultra-expanded;
     font-weight: 500;
+}
+
+.nameMargin {
+    margin-left: 40px;
 }
 .hotelsTag {
     height: 35px;
@@ -42,6 +47,7 @@
     flex-direction: row;
     align-self: center;
     font-stretch: expanded;
+    cursor: pointer;
 }
 
 .intNavigators {

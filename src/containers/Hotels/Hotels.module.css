@@ -1,0 +1,12 @@
+
+.listArea {
+    margin: 150px auto 0px auto;
+    max-width: 650px;
+    background-color: #fbfbfb;
+    min-height: 400px;
+}
+
+
+
+@media (max-width: 530px) {}
+@media (min-width: 530px) {}
