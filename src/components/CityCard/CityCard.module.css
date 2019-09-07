@@ -104,6 +104,9 @@
     display: border-box;
 }
 
+.IntDescription:hover {
+    cursor: pointer;
+}
 @media (max-width: 530px) {
     .IntDescription {
         display: none;
