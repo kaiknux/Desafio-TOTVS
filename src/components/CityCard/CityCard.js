@@ -26,6 +26,7 @@ class CityCard extends Component {
 
         let div2 = '';
         let navImage = ccNav1;
+        let navText = "Ver detalhe da ação"
         if (this.state.expanded) {
             div2 = (
                 <div className={classes.ccContent}>
@@ -38,6 +39,7 @@ class CityCard extends Component {
                 </div>
             )
             navImage = ccNav2
+            navText = "Ocultar detalhe da ação"
         }
         return (
             <div className={classes.ccContainer}>
@@ -46,7 +48,7 @@ class CityCard extends Component {
                         <div><img alt="comp" className={classes.hotelsTag} src={url} /></div><div>{this.props.nome}</div>
                     </div>
                     <div onClick={() => this.expandCardHandler()} className={classes.hotelInteraction}>
-                        <div  className={classes.IntDescription}>Ver detalhe da ação</div><img alt="n" className={classes.intNavigators} src={navImage} />
+                        <div  className={classes.IntDescription}>{navText}</div><img alt="n" className={classes.intNavigators} src={navImage} />
                     </div>
                 </div>
                 {div2 }
