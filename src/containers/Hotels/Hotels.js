@@ -8,7 +8,7 @@ import axios from '../../axios-orders';
 import * as hotelSearchActions from '../../store/actions/index'
 
 
-class HotelSearch extends Component {
+class Hotels extends Component {
     state = {
         loading: null,
     }
@@ -16,13 +16,6 @@ class HotelSearch extends Component {
 
     componentDidMount () {
         this.props.onInitClients();
-        axios.get('/clientes.json', {mode:'no-cors'})
-        .then( response => {
-            this.setState({clientes: response.data})
-        })
-        .catch( error => {
-            console.log(error);
-        })
     }
 
 
@@ -35,7 +28,7 @@ class HotelSearch extends Component {
         return (
             <div className={classes.listArea}>
                 <SearchResults />
-                <button onClick={() => console.log(this.props)}>Aqui</button>
+                <button onClick={() => console.log(this.props)}>Props</button>
                 <button onClick={() => console.log(this.state)}>State</button>
             </div>
         )
@@ -57,4 +50,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(HotelSearch, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(Hotels, axios));
