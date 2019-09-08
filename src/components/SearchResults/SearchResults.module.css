@@ -10,3 +10,33 @@ Body {
 p {
     color: #a5a5a5;
 }
+
+.mContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.imgTeste {
+    width: 250px;
+    height: auto;
+    align-content: center;
+}
+
+.imgArea {
+    margin: auto;
+}
+
+.txtArea {
+    margin: auto;
+}
+
+.mdInteraction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.mdInteraction p {
+    color: purple;
+}

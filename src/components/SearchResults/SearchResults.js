@@ -3,11 +3,42 @@ import classes from './SearchResults.module.css';
 import CityCard from '../../components/CityCard/CityCard';
 import * as hotelSearchActions from '../../store/actions/index'
 import { connect } from 'react-redux';
-
+import Modal from '../UI/Modal/Modal';
 
 class SearchResults extends Component {
-    
+    state = {
+        showModal: false,
+        object: false,
+    }
+
+    displayModalWithInfo = (cartao) => {
+        this.setState({showModal: true, object: cartao})
+    }
+
+    hideModal = () => {
+        this.setState({showModal: false})
+    }
+
     render() {
+        let modalInfo = '';
+        if (this.state.showModal) {
+            modalInfo = (
+                <div className={classes.mContent}>
+                    <div className={classes.imgArea}>
+                        <img className={classes.imgTeste} src={`https://firebasestorage.googleapis.com/v0/b/desafio-totvseo.appspot.com/o/${this.state.object.foto}?alt=media&token=f87c9c27-f691-4c43-a758-c41555642e07`} />
+                    </div>
+                    <div className={classes.txtArea}>
+                        <h4>{this.state.object.nome} parece uma boa empresa para oferecer serviços de tecnologia.</h4>
+                        <p>Deseja ligar agora?</p>
+                    </div>
+                    <div className={classes.mdInteraction}>
+                        <p className={classes.intOptions}>NÃO</p>
+                        <p className={classes.intOptions}>SIM</p>
+                    </div>
+                </div>
+            )
+
+        }
         let number = this.props.clis.length
         let items = '';
         let sufix = 'ítem'
@@ -28,6 +59,7 @@ class SearchResults extends Component {
                 descric={cartao.descric}
                 key={cartao.id}
                 chamada={cartao.chamada}
+                clicked={() => this.displayModalWithInfo(cartao)}
             />
             })
         }
@@ -35,6 +67,9 @@ class SearchResults extends Component {
             <div className={classes.srContainer}>
             <p>{tText}</p>
             {items}
+                <Modal show={this.state.showModal} modalClosed={() => this.hideModal()}>
+                    {modalInfo}
+                </Modal>
         </div>
         )
     }
