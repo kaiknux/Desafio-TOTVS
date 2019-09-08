@@ -38,7 +38,6 @@ class Toolbar extends Component {
                 <SideDrawer open={this.state.showSideDrawer}
                     closed={this.sideDrawerClosedHandler} />
             </div>
-            <button onClick={() => this.setState({showSideDrawer: true})}>Mostrar Sidebar</button>
 
         </div>
         )

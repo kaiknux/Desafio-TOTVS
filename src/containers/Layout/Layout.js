@@ -25,7 +25,6 @@ class Layout extends Component {
 
                 </div>
                 {this.props.children}
-                <button onClick={() => this.setState({showSideDrawer: true})}>Mostrar Sidebar</button>
 
                 <Footer />
 
