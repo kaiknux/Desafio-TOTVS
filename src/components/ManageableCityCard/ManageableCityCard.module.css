@@ -1,0 +1,123 @@
+.ccContainer {
+    border: 1px solid #E1E1E1;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    font-style: 'Roboto';
+    background-color: white;
+    margin-bottom: 7.5px;
+}
+
+.ccHeader {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 25px 0 10px;
+}
+
+.hotelTag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-stretch: ultra-expanded;
+    font-weight: 500;
+}
+
+.nameMargin {
+    margin-left: 40px;
+}
+.hotelsTag {
+    height: 35px;
+    margin-right: 5px;
+}
+.hotelInteraction {
+    color: #b79be8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-self: center;
+    font-stretch: expanded;
+    cursor: pointer;
+}
+
+.intNavigators {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+}
+
+.ccContent {
+    font-size: 10px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #E1E1E1;
+}
+.ccDescription {
+    max-width: 360px;
+    min-width: 180px;
+    font-size: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+
+}
+.ccInteraction {
+    align-self: baseline;
+}
+.ccBtn1 {
+    border-radius: 3px;
+    border: 1px solid #ff0000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    display: border-box;
+    font-style: 'Arial';
+    font-size: 12px;
+    font-weight: 500;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /*Safari*/transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: white;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+.ccBtn1:hover {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #ff0000;
+    display: border-box;
+}
+
+@media (max-width: 530px) {
+    .IntDescription {
+        display: none;
+    }
+    .ccContent {
+        padding: 20px 5px 20px 5px;
+    }
+}
+@media (min-width: 530px) {
+    .IntDescription {
+        display: block;
+    }
+    .ccContent {
+        padding: 20px 25px 20px 25px;
+    }
+}

@@ -9,10 +9,10 @@ export const addClient = (id) => {
     }
 }
 
-export const removeClient = (id) => {
+export const removeClient = (novaListaDeClientes) => {
     return {
         type: actionTypes.REMOVE_CLIENT,
-        clientId: id
+        clientes: novaListaDeClientes
     }
 }
 
@@ -42,6 +42,21 @@ export const initClients = () => {
         .catch( error => {
             dispatch(fetchClientsFailed())
         })
+    }
+}
+
+export const successfulSearch = (cliente) => {
+    return {
+        type: actionTypes.SUCCESSFUL_SEARCH,
+        cliente: cliente,
+    }
+}
+
+export const endOfSearch = (clientes, sString) => {
+    return {
+        type: actionTypes.END_OF_SEARCH,
+        clientes: clientes,
+        string: sString
     }
 }
 

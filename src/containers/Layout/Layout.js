@@ -3,39 +3,49 @@ import classes from './Layout.module.css';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import Footer from '../../components/UI/Footer/Footer';
-import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
+import * as hotelSearchActions from '../../store/actions/index'
+import { connect } from 'react-redux';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 class Layout extends Component {
     state = {
         showSideDrawer: false,
     }
-
-    sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer: false});
-    }
-
-    sideDrawerToggleHandler = () => {
-        this.setState((prevState) => {
-            return {showSideDrawer: !prevState.showSideDrawer};
-        });
+    componentDidMount () {
+        this.props.onInitClients();  
     }
 
     render() {
-        return (
-            <Auxiliary>
+        let layObject = <Spinner />
+        if (this.props.clis) {
+            layObject = ( <Auxiliary>
                 <div className={classes.footerPusher}>
                     <Toolbar />
 
                 </div>
                 {this.props.children}
-                <button onClick={() => this.setState({showSideDrawer: true})}>Mostrar Sidebar</button>
 
                 <Footer />
-                <SideDrawer open={this.state.showSideDrawer}
-                    closed={this.sideDrawerClosedHandler} />
+
             </Auxiliary>
-        )
+            )
+        }
+        return ( <>L{layObject}</> )
     }
 }
 
-export default Layout;
+const mapStateToProps = state => {
+    return {
+        clis: state.cList,
+        countList: state.totalList,
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onInitClients: () => dispatch(hotelSearchActions.initClients())
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

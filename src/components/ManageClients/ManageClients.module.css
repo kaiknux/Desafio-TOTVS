@@ -1,0 +1,12 @@
+Body {
+    font-size: 13px;
+    color: #777777;
+}
+
+.mcContainer {
+    margin: auto;
+    max-width: 640px;
+}
+p {
+    color: #a5a5a5;
+}

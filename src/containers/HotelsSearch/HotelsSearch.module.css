@@ -21,20 +21,6 @@
     height: 80px;
 }
 
-.inputItself {
-    margin: auto;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    max-width: 550px;
-    min-width: 330px;
-    display: flex;
-    flex-direction: row;
-    flex-flow: nowrap;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-}
 
 .formBtn1 {
     height: 47px;
@@ -75,9 +61,14 @@
     max-width: 650px;
     background-color: #fbfbfb;
     min-height: 400px;
+
 }
 
-
+.divImage {
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 530px) {}
 @media (min-width: 530px) {}

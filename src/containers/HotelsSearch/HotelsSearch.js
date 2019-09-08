@@ -2,27 +2,35 @@ import React from 'react';
 import classes from './HotelsSearch.module.css';
 import Rococo from '../../components/UI/RococoDeFundo/RococoDeFundo';
 
-import magGlass from '../../assets/images/magGlass.png';
-import Input from '../../components/Input/Input';
+import SearchForm from '../../components/Navigation/SearchForm/SearchForm';
 import SearchResults from '../../components/SearchResults/SearchResults';
+import { connect } from 'react-redux';
+import noSearchYet from '../../assets/images/notFound.jpg'
 
-const hotelsSearch = (props) => (
+
+const hotelsSearch = (props) => {
+    let sResults = <div className={classes.divImage}><img className={classes.imgNotFound} alt="img" src={noSearchYet}/></div>;
+    if (props.clis) {
+        sResults = <SearchResults />
+    }
+    return (
     <div className={classes.hsContainer}>
         <div className={classes.upperArea}>
             <div className={classes.inputArea}>
-                <form className={classes.inputItself}>
-                    <Input />
-                    <button className={classes.formBtn1}>
-                        <img src={magGlass} className={classes.formMagGlass} alt='nOne' />
-                    </button>
-                </form>
+                    <SearchForm />
             </div>
         </div>
         <Rococo />
         <div className={classes.searchArea}>
-            <SearchResults />
+            {sResults}
         </div>
     </div>
-)
-
-export default hotelsSearch;
+    )
+}
+const mapStateToProps = state => {
+    return {
+        clis: state.filteredItems,
+        countList: state.totalList,
+    }
+};
+export default connect(mapStateToProps, null)(hotelsSearch);
