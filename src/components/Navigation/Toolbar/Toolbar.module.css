@@ -44,10 +44,16 @@
     .tbNav {
         display: none;
     }
+    .tbNmob {
+        margin: 10px auto 0px auto;
+    }
 }
 @media (min-width: 500px) {
     .tbNav {
         display: flex;
+    }
+    .tbNmob {
+        display: none;
     }
 }
 

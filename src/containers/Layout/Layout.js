@@ -15,15 +15,6 @@ class Layout extends Component {
     componentDidMount () {
         this.props.onInitClients();  
     }
-    sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer: false});
-    }
-
-    sideDrawerToggleHandler = () => {
-        this.setState((prevState) => {
-            return {showSideDrawer: !prevState.showSideDrawer};
-        });
-    }
 
     render() {
         let layObject = <Spinner />
@@ -37,8 +28,7 @@ class Layout extends Component {
                 <button onClick={() => this.setState({showSideDrawer: true})}>Mostrar Sidebar</button>
 
                 <Footer />
-                <SideDrawer open={this.state.showSideDrawer}
-                    closed={this.sideDrawerClosedHandler} />
+
             </Auxiliary>
             )
         }
