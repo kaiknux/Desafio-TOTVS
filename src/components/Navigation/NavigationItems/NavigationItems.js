@@ -7,7 +7,7 @@ const navigationItems = () => (
     <ul className={classes.NavigationItems}>
     <NavigationItem link='/' exact>Inicio</NavigationItem>
     <NavigationItem link='/hotelssearch'>Busca</NavigationItem>
-    <NavigationItem link='/hotels'>Lista de Hoteleiros</NavigationItem>
+    <NavigationItem link='/hotels'>Gerenciar Hotéis</NavigationItem>
     <NavigationItem link='/addhotel'>Adicionar Hotel</NavigationItem>
     </ul>
 

@@ -3,7 +3,6 @@ import classes from './Layout.module.css';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import Footer from '../../components/UI/Footer/Footer';
-import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 import * as hotelSearchActions from '../../store/actions/index'
 import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';

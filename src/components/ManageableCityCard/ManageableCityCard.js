@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import classes from './CityCard.module.css';
+import classes from './ManageableCityCard.module.css';
 
 import ccNav1 from '../../assets/images/ccNav1.svg';
 import ccNav2 from '../../assets/images/ccNav2.svg';
 
-class CityCard extends Component {
+class ManageableCityCard extends Component {
     state = {
         expanded: false,
     }
@@ -34,7 +34,7 @@ class CityCard extends Component {
                         <>{this.props.descric}</>
                     </div>
                     <div className={classes.ccInteraction}>
-                        <button onClick={this.props.clicked} className={classes.ccBtn1}>VER MAIS</button>
+                        <button onClick={this.props.clicked} className={classes.ccBtn1}>REMOVER</button>
                     </div>
                 </div>
             )
@@ -61,5 +61,5 @@ class CityCard extends Component {
 
 
 
-export default CityCard;
+export default ManageableCityCard;
 

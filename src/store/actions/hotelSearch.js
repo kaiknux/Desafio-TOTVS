@@ -9,10 +9,10 @@ export const addClient = (id) => {
     }
 }
 
-export const removeClient = (id) => {
+export const removeClient = (novaListaDeClientes) => {
     return {
         type: actionTypes.REMOVE_CLIENT,
-        clientId: id
+        clientes: novaListaDeClientes
     }
 }
 

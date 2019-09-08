@@ -165,7 +165,7 @@ class SearchForm extends Component {
                                          onChange={this.searchEventHandler} 
                                          name="city" 
                                          key="teste"
-                                         placeholder="Procure clientes" 
+                                         placeholder="Procure clientes de hotelaria" 
                                          className={classes.FormControl} 
                                          onClick={()=> this.useSearchHandler()}
                                          autoFocus 

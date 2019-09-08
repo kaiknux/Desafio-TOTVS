@@ -17,13 +17,12 @@ const reducer = (state = initialState, action) => {
         case actionTypes.REMOVE_CLIENT:
             return {
                 ...state,
-                clients: {
-                    ...state.clients,
-                    [action.clientId]: state.clients[action.clientId] - 1
+                totalList: action.clientes.length,
+                cList: action.clientes,
+                searchString: null,
+                filteredItems: null,
                 }
-            }
         case actionTypes.SET_CLIENTS:
-
             return {
                 ...state,
                 totalList: action.clientes.length,
