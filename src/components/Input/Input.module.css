@@ -1,7 +1,8 @@
 .Input {
-    width: 100%;
+    width: 60%;
     font-size: 12px;
     font-weight: 200;
+    margin-top: 5px;
 }
 
 .InputElement {
@@ -12,11 +13,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-stretch: expanded;
-    color: rgb(168, 168, 168);
+    color: black;
     border: none;
     border-radius: 2px 0px 0px 2px;
     /*outline: none;
-    */background-color: white;
+    */background-color: rgb(182, 182, 182);
     width: 100%;
     height: 45px;
     -webkit-border-radius: 2px 0px 0px 2px;
