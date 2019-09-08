@@ -12,8 +12,12 @@ class SearchResults extends Component {
         let items = '';
         let sufix = 'ítem'
         if (number > 1) {
-        sufix = 'ítens'
-        }
+            sufix = 'ítens'
+            }
+        let tText = `Resultado da busca: exibindo ${number} ${sufix}`
+        if (number === 0) {
+            tText = `Resultado da busca: não foram encontrados identificáveis por "${this.props.sString}"`
+            }
         if (this.props.clis) {
             items = this.props.clis.map(cartao => {
                 return <CityCard 
@@ -29,7 +33,7 @@ class SearchResults extends Component {
         }
         return (
             <div className={classes.srContainer}>
-            <p>Resultado da busca: exibindo {number} {sufix}</p>
+            <p>{tText}</p>
             {items}
         </div>
         )
@@ -42,6 +46,7 @@ const mapStateToProps = state => {
     return {
         clis: state.filteredItems,
         countList: state.totalList,
+        sString: state.searchString
     }
 };
 const mapDispatchToProps = dispatch => {

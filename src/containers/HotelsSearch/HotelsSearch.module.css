@@ -61,9 +61,14 @@
     max-width: 650px;
     background-color: #fbfbfb;
     min-height: 400px;
+
 }
 
-
+.divImage {
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 530px) {}
 @media (min-width: 530px) {}
