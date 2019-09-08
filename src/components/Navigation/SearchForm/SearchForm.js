@@ -18,24 +18,19 @@ class SearchForm extends Component {
         searchString: '',
         final: '',
         backdrap: false,
-        
+        nowUsing: false,
     };
 
-    componentDidMount () {
-        this.props.onInitClients();
-        this.setState({clients: this.props.clis})
-        
-        console.log("%cSearchForm props", "color: cyan; font-size: 14px")
-        console.log(this.props)
-        console.log("%cSearchForm state", "color: cyan; font-size: 14px")
-        console.log(this.state)
-    }
 
     searchEventHandler = (event) => {
+        if (!this.state.nowUsing) {
+            this.setState({clients: this.props.clis, nowUsing: true})
+        }
         this.setState({
             searchString: event.target.value,
             backdrap: true,
         })
+
         let libraries = this.state.suggestions
         let searchString = this.state.searchString.trim().toLowerCase()
         if (searchString.length > 0) {
@@ -46,7 +41,7 @@ class SearchForm extends Component {
 
     useSearchHandler = () => {
         let arrayPraFiltrar = this.props.clis.map(a=> a.nome)
-        this.setState({suggestions: arrayPraFiltrar})
+        this.setState({suggestions: arrayPraFiltrar, nowUsing: true})
         console.log("%cSearchForm props", "color: cyan; font-size: 14px")
         console.log(this.props)
         console.log("%cSearchForm state", "color: cyan; font-size: 14px")
@@ -194,7 +189,7 @@ class SearchForm extends Component {
 
 const mapStateToProps = state => {
     return {
-        clis: state.newItem,
+        clis: state.cList,
         countList: state.totalList,
     }
 };

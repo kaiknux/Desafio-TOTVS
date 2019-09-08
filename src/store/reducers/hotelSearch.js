@@ -6,6 +6,7 @@ const initialState = {
     error: false,
     searchString: '',
     filteredItems: null,
+    cList: null,
 }
 
 
@@ -26,7 +27,9 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 totalList: action.clientes.length,
-                newItem: action.clientes 
+                cList: action.clientes,
+                searchString: null,
+                filteredItems: null,
             }
         case actionTypes.FETCH_CLIENTS_FAILED:
             return {

@@ -6,8 +6,14 @@ import { connect } from 'react-redux';
 
 
 class SearchResults extends Component {
+    
     render() {
+        let number = this.props.clis.length
         let items = '';
+        let sufix = 'ítem'
+        if (number > 1) {
+        sufix = 'ítens'
+        }
         if (this.props.clis) {
             items = this.props.clis.map(cartao => {
                 return <CityCard 
@@ -23,7 +29,7 @@ class SearchResults extends Component {
         }
         return (
             <div className={classes.srContainer}>
-            <p>Resultado da busca: exibindo {this.props.countList} ítens</p>
+            <p>Resultado da busca: exibindo {number} {sufix}</p>
             {items}
         </div>
         )
@@ -34,7 +40,7 @@ class SearchResults extends Component {
 
 const mapStateToProps = state => {
     return {
-        clis: state.newItem,
+        clis: state.filteredItems,
         countList: state.totalList,
     }
 };

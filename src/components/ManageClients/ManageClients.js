@@ -34,7 +34,7 @@ class ManageClients extends Component {
 
 const mapStateToProps = state => {
     return {
-        clis: state.newItem,
+        clis: state.cList,
         countList: state.totalList,
     }
 };
