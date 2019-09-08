@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 135px;
+
 }
 
 .tbContent {
@@ -47,6 +47,9 @@
     .tbNmob {
         margin: 10px auto 0px auto;
     }
+    .tbContainer {
+        height: 150px;
+    }
 }
 @media (min-width: 500px) {
     .tbNav {
@@ -54,6 +57,9 @@
     }
     .tbNmob {
         display: none;
+    }
+    .tbContainer {
+        height: 135px;
     }
 }
 
