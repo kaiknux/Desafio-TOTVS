@@ -21,7 +21,10 @@ class SearchForm extends Component {
         nowUsing: false,
     };
 
-
+    componentDidMount () {
+        let arrayPraFiltrar = this.props.clis.map(a=> a.nome)
+        this.setState({suggestions: arrayPraFiltrar, nowUsing: true})
+    }
     searchEventHandler = (event) => {
         if (!this.state.nowUsing) {
             this.setState({clients: this.props.clis, nowUsing: true})
@@ -40,12 +43,7 @@ class SearchForm extends Component {
     }
 
     useSearchHandler = () => {
-        let arrayPraFiltrar = this.props.clis.map(a=> a.nome)
-        this.setState({suggestions: arrayPraFiltrar, nowUsing: true})
-        console.log("%cSearchForm props", "color: cyan; font-size: 14px")
-        console.log(this.props)
-        console.log("%cSearchForm state", "color: cyan; font-size: 14px")
-        console.log(this.state)
+
     }
 
     endOfSearchHandler = (nome) => {
