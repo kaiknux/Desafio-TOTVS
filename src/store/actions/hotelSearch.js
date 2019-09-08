@@ -45,6 +45,21 @@ export const initClients = () => {
     }
 }
 
+export const successfulSearch = (cliente) => {
+    return {
+        type: actionTypes.SUCCESSFUL_SEARCH,
+        cliente: cliente,
+    }
+}
+
+export const endOfSearch = (clientes, sString) => {
+    return {
+        type: actionTypes.END_OF_SEARCH,
+        clientes: clientes,
+        string: sString
+    }
+}
+
 // export const initClients = () => {
 //      return async dispatch => {
 //         let response = await fetch('http://desafio-totvseo.firebaseio.com/clientes', {mode:'no-cors'})

@@ -4,6 +4,8 @@ const initialState = {
     totalList: null,
     clientes: '',
     error: false,
+    searchString: '',
+    filteredItems: null,
 }
 
 
@@ -31,6 +33,19 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 error: true,
             }
+        case actionTypes.SUCCESSFUL_SEARCH:
+            return {
+                ...state,
+                error: true,
+                filteredItems: action.cliente
+            }
+        case actionTypes.END_OF_SEARCH:
+            return {
+                ...state,
+                error: true,
+                searchString: action.string,
+                filteredItems: action.clientes
+            }            
         default:
             return state;
     }

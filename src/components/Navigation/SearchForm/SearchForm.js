@@ -54,10 +54,11 @@ class SearchForm extends Component {
     }
 
     endOfSearchHandler = (nome) => {
-        let incrivel = this.props.clis.filter(itens => this.state.final.includes(itens.nome))
-        console.log(incrivel)
+        let found = this.props.clis.filter(itens => this.state.final.includes(itens.nome))
+        const sString = this.state.searchString
+        console.log(found)
         this.funcaoReload()
-        this.props.onEndOfSearch()
+        this.props.onEndOfSearch(found, sString)
 
     }
 
@@ -65,7 +66,7 @@ class SearchForm extends Component {
         let retrouvè = this.props.clis.filter(itens => nome.includes(itens.nome))
         console.log(retrouvè)
         this.funcaoReload()
-        this.props.onSuccessfulSearch()
+        this.props.onSuccessfulSearch(retrouvè)
 
     }
 
@@ -200,8 +201,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onInitClients: () => dispatch(hotelSearchActions.initClients()),
-        // onSuccessfulSearch: () => dispatch(hotelSearchActions.successfulSearch()),
-        // onEndOfSearch: () => dispatch(hotelSearchActions.endOfSearch()),
+        onSuccessfulSearch: (cliente) => dispatch(hotelSearchActions.successfulSearch(cliente)),
+        onEndOfSearch: (clientes, sString) => dispatch(hotelSearchActions.endOfSearch(clientes, sString)),
     }
 }
 
