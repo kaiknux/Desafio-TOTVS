@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './SearchForm.module.css';
-import { withRouter } from 'react-router-dom'; // ver se precisa mesmo
+// import { withRouter } from 'react-router-dom'; // ver se precisa mesmo
 
 import axios from '../../../axios-orders';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
@@ -41,10 +41,7 @@ class SearchForm extends Component {
         if (searchString.length > 0) {
             libraries = libraries.filter( i => i.toLowerCase().match( searchString ) )
         }
-        console.log(searchString)
-        console.log(libraries)
         this.setState({final: libraries, backdrap: true, triggerSuggestion: true})
-        console.log(this.state)
     }
 
     useSearchHandler = () => {
@@ -57,6 +54,18 @@ class SearchForm extends Component {
     }
 
     endOfSearchHandler = (nome) => {
+        let incrivel = this.props.clis.filter(itens => this.state.final.includes(itens.nome))
+        console.log(incrivel)
+        this.funcaoReload()
+        this.props.onEndOfSearch()
+
+    }
+
+    successfulSearchHandler = (nome) => {
+        let retrouvè = this.props.clis.filter(itens => nome.includes(itens.nome))
+        console.log(retrouvè)
+        this.funcaoReload()
+        this.props.onSuccessfulSearch()
 
     }
 
@@ -68,16 +77,20 @@ class SearchForm extends Component {
     productSelectedHandler = (prodName) => {
         this.setState({ searchString: prodName, backdrap: false, triggerSuggestion: false })
 
-        const queryParams = [];
+        // const queryParams = [];
 
-        const libraries = this.state.fetchedHotels
-        for (let osc in libraries) {
-            if (libraries[osc].nome === prodName) {
-                queryParams.push('product=' + libraries[osc].id);
-            }
-        }
-        console.log(queryParams)
-        const queryString = queryParams.join('&');
+        // const libraries = this.state.fetchedHotels
+        
+        // for (let osc in libraries) {
+        //     if (libraries[osc].nome === prodName) {
+        //         queryParams.push('product=' + libraries[osc].id);
+        //     }
+        // }
+        // console.log(queryParams)
+        // const queryString = queryParams.join('&');
+
+
+
         // console.log(this.props)
         // const lugar = `/sale/${queryString}`
                         // console.log(this.props.history)
@@ -130,7 +143,7 @@ class SearchForm extends Component {
                 this.state.final.map(
                     sugestaoUnica => {
                         return ( 
-                        <div className={classes.sugItem} onClick={() => this.endOfSearchHandler(sugestaoUnica)}>
+                        <div className={classes.sugItem} onClick={() => this.successfulSearchHandler(sugestaoUnica)}>
                             {sugestaoUnica}
                         </div>
                         )
@@ -149,30 +162,29 @@ class SearchForm extends Component {
 
         return (
                 <div className={classes.Headerf1}>
-                    <form onSubmit={this.searchHandler} className={classes.fHeader}>
+                    <div className={classes.fHeader}>
                         <div className={classes.fContainer}>
                             <input     onKeyPress={event => {
-                                          if (event.key === 'Enter') {
-                                                this.suggestionSelected()
-                                         }}}
+                                          if (event.key === 'Enter') {this.endOfSearchHandler()}}}
                                          autoComplete="off" 
                                          value={text} 
                                          onChange={this.searchEventHandler} 
                                          name="city" 
                                          key="teste"
-                                         placeholder="Digite o que procura" 
+                                         placeholder="Procure clientes" 
                                          className={classes.FormControl} 
                                          onClick={()=> this.useSearchHandler()}
                                          autoFocus 
                                          />
                                          {sugestoesEmContainer}
-                                         {backdrap}
+ 
                             
                         </div>
-                        <button className={classes.formBtn1}>
+                        <button className={classes.formBtn1} onClick={() => this.endOfSearchHandler()}>
                         <img src={magGlass} className={classes.formMagGlass} alt='nOne' />
                     </button>
-                    </form>
+                                                            {backdrap}
+                    </div>
                 </div>
 
         );
@@ -187,8 +199,9 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        onInitClients: () => dispatch(hotelSearchActions.initClients())
-
+        onInitClients: () => dispatch(hotelSearchActions.initClients()),
+        // onSuccessfulSearch: () => dispatch(hotelSearchActions.successfulSearch()),
+        // onEndOfSearch: () => dispatch(hotelSearchActions.endOfSearch()),
     }
 }
 
