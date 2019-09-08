@@ -16,22 +16,22 @@ class AddHotels extends Component {
                     required: true,
                 },
             },
-            descric: {
+            link: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Descrição do cliente',
+                    placeholder: 'Link do site do cliente',
                 },
                 value: '',
                 validation: {
                     required: true,
                 },
             },
-            link: {
+            descric: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Link do site do cliente',
+                    placeholder: 'Descrição do cliente',
                 },
                 value: '',
                 validation: {
@@ -54,6 +54,7 @@ class AddHotels extends Component {
             });
         }
         let form = (
+            <>
             <form onSubmit={this.formsToFirebaseHandler}>
                 {formElementsArray.map(formElement => (
                     <Input key={formElement.id}
@@ -63,9 +64,12 @@ class AddHotels extends Component {
                         changed={(event) => this.inputChangedHandler(event, formElement.id)}
                     />
                 ))}
+                            <p>Adicione foto.jpg e chamadaDaMarca.jpg:</p>
                 <input type="file" onChange={this.handleFileChange} multiple />
                 <button>Enviar</button>
-            </form>);
+            </form>
+            </>
+                );
 
 
         return (

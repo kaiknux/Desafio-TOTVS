@@ -1,4 +1,7 @@
 .cAddHotels {
-    margin-top: 150px;
+    margin: 150px auto 0px auto;
     min-height: 800px;
+    width: 600px;
+    font-family: 'Roboto';
+
 }
