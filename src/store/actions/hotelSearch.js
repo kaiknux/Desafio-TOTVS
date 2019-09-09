@@ -35,7 +35,7 @@ export const initClients = () => {
     //         'Access-Control-Allow-Origin':'*',
     //         'Content-Type': 'multipart/form-data'
     // });
-        axios.get('http://desafio-totvseo.firebaseio.com/clientes.json')
+        axios.get('https://desafio-totvseo.firebaseio.com/clientes.json')
         .then( response => {
             dispatch(setClients(response.data))
         })
