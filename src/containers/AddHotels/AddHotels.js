@@ -68,6 +68,10 @@ class AddHotels extends Component {
                 <input type="file" onChange={this.handleFileChange} multiple />
                 <button>Enviar</button>
             </form>
+            <div>
+                <p>Imagens 'dummy' para teste (download no client e envio para testar na ferramenta de busca):</p>
+                <p>Nota que para conservar o conteúdo não adicionei endpoits de post, portanto recarregando a página o conteúdo voltará ao original:</p>
+            </div>
             </>
                 );
 
