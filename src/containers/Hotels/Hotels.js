@@ -17,9 +17,7 @@ class Hotels extends Component {
         return (
             <div className={classes.listArea}>
                 <ManageClients />
-                <button onClick={() => console.log(this.props)}>Props</button>
-                <button onClick={() => console.log(this.state)}>State</button>
-            </div>
+           </div>
         )
     }
 }

@@ -25,7 +25,7 @@ class SearchResults extends Component {
             modalInfo = (
                 <div className={classes.mContent}>
                     <div className={classes.imgArea}>
-                        <img className={classes.imgTeste} src={`https://firebasestorage.googleapis.com/v0/b/desafio-totvseo.appspot.com/o/${this.state.object.foto}?alt=media&token=f87c9c27-f691-4c43-a758-c41555642e07`} />
+                        <img className={classes.imgTeste} alt="img" src={`https://firebasestorage.googleapis.com/v0/b/desafio-totvseo.appspot.com/o/${this.state.object.foto}?alt=media&token=f87c9c27-f691-4c43-a758-c41555642e07`} />
                     </div>
                     <div className={classes.txtArea}>
                         <h4>{this.state.object.nome} parece uma boa empresa para oferecer serviços de tecnologia.</h4>

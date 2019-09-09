@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import HotelsSearch from './containers/HotelsSearch/HotelsSearch';
 import Hotels from './containers/Hotels/Hotels';
 import Info from './containers/Info/Info';
+import AddHotel from './containers/AddHotels/AddHotels'
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
       <Layout>
             <Switch>
+              <Route path="/addhotel" component={AddHotel}/>
               <Route path="/hotels" component={Hotels}/>
               <Route path="/hotelssearch" component={HotelsSearch}/>
               <Route path="/" exact component={Info}/>

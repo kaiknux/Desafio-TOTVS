@@ -18,3 +18,5 @@ const info = (props) => (
 );
 
 export default info;
+
+// não seria container, má organização do projeto... aplicável a outros componentes

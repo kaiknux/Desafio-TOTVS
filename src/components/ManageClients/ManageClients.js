@@ -5,7 +5,7 @@ import * as hotelSearchActions from '../../store/actions/index'
 import { connect } from 'react-redux';
 
 
-class ManageClients extends Component {
+export class ManageClients extends Component {
     sate = {
 
     }
